@@ -1,0 +1,10 @@
+--- 
+apiVersion: "v1"
+kind: "Namespace"
+metadata: 
+  name: "dvwa"
+  labels: 
+    istio-injection: ""
+spec: 
+  finalizers: 
+    - "kubernetes"

@@ -1,0 +1,15 @@
+--- 
+apiVersion: "v1"
+kind: "Pod"
+metadata: 
+  name: "dvwa"
+  labels: 
+    name: "dvwa"
+spec: 
+  containers: 
+    - 
+      name: "dvwa"
+      image: "citizenstig/dvwa"
+      ports: 
+        - 
+          containerPort: 80
