@@ -23,6 +23,12 @@ jobs:
     - name: Install checkov
       run: pip3 install checkov
 
-    - name: Run Checkov scan 
+    - name: Check terraform, github-actions misconfigurations 
       run: checkov --directory . -o cli
+
+    - name: Install kubescape
+      run: curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash
+
+    - name: Check kubernetes misconfigurations
+      run: kubescape scan .
       
