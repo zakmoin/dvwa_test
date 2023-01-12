@@ -22,4 +22,7 @@ jobs:
       
     - name: Install checkov
       run: pip3 install checkov
+
+    - name: Run Checkov scan 
+      run: checkov --directory . -o cli
       
