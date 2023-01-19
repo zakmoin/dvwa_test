@@ -30,14 +30,14 @@ Passed checks: 9, Failed checks: 60, Skipped checks: 0
 [32m	PASSED for resource: google_compute_instance.server
 [35m	File: /gcp/instances.tf:3-34
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/bc_gcp_iam_2
-[97mCheck: CKV2_GCP_7: "Ensure that a MySQL database instance does not allow anyone to connect with administrative privileges"
-[32m	PASSED for resource: google_sql_database_instance.master_instance
-[35m	File: /gcp/big_data.tf:1-19
-	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-that-a-mysql-database-instance-does-not-allow-anyone-to-connect-with-administrative-privileges
 [97mCheck: CKV2_GCP_12: "Ensure GCP compute firewall ingress does not allow unrestricted access to all ports"
 [32m	PASSED for resource: google_compute_firewall.allow_all
 [35m	File: /gcp/networks.tf:19-27
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-gcp-google-compute-firewall-ingress-does-not-allow-unrestricted-access-to-all-ports
+[97mCheck: CKV2_GCP_7: "Ensure that a MySQL database instance does not allow anyone to connect with administrative privileges"
+[32m	PASSED for resource: google_sql_database_instance.master_instance
+[35m	File: /gcp/big_data.tf:1-19
+	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-that-a-mysql-database-instance-does-not-allow-anyone-to-connect-with-administrative-privileges
 [97mCheck: CKV_GCP_52: "Ensure PostgreSQL database 'log_connections' flag is set to 'on'"
 [31m	FAILED for resource: google_sql_database_instance.master_instance
 [35m	File: /gcp/big_data.tf:1-19
@@ -3082,27 +3082,27 @@ Passed checks: 31, Failed checks: 1, Skipped checks: 0
 
 [97mCheck: CKV_GHA_6: "Found artifact build without evidence of cosign sbom attestation in pipeline"
 [32m	PASSED for resource: jobs
-[35m	File: /.github/workflows/docker-image.yml:11-36
+[35m	File: /.github/workflows/docker-image.yml:11-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/found-artifact-build-without-evidence-of-cosign-sbom-attestation-in-pipeline
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build)
-[35m	File: /.github/workflows/docker-image.yml:13-36
+[35m	File: /.github/workflows/docker-image.yml:13-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build)
-[35m	File: /.github/workflows/docker-image.yml:13-36
+[35m	File: /.github/workflows/docker-image.yml:13-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_5: "Found artifact build without evidence of cosign sign execution in pipeline"
 [32m	PASSED for resource: jobs
-[35m	File: /.github/workflows/docker-image.yml:11-36
+[35m	File: /.github/workflows/docker-image.yml:11-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/no-evidence-of-signing
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build)
-[35m	File: /.github/workflows/docker-image.yml:13-36
+[35m	File: /.github/workflows/docker-image.yml:13-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build)
-[35m	File: /.github/workflows/docker-image.yml:13-36
+[35m	File: /.github/workflows/docker-image.yml:13-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV_GHA_7: "The build output cannot be affected by user parameters other than the build entry point and the top-level source location. GitHub Actions workflow_dispatch inputs MUST be empty. "
 [32m	PASSED for resource: on(Docker Image CI)
@@ -3110,99 +3110,99 @@ Passed checks: 31, Failed checks: 1, Skipped checks: 0
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/the-build-output-cannot-be-affected-by-user-parameters-other-than-the-build-entry-point-and-the-top-level-source-location-github-actions-workflow_dispatch-inputs-must-be-empty
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build).steps[1]
-[35m	File: /.github/workflows/docker-image.yml:16-19
+[35m	File: /.github/workflows/docker-image.yml:18-21
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build).steps[2](Install pip3)
-[35m	File: /.github/workflows/docker-image.yml:18-24
+[35m	File: /.github/workflows/docker-image.yml:20-26
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build).steps[3](Install checkov)
-[35m	File: /.github/workflows/docker-image.yml:23-27
+[35m	File: /.github/workflows/docker-image.yml:25-29
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build).steps[4](Check terraform, github-actions misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:26-30
+[35m	File: /.github/workflows/docker-image.yml:28-32
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build).steps[5](Install kubescape)
-[35m	File: /.github/workflows/docker-image.yml:29-33
+[35m	File: /.github/workflows/docker-image.yml:31-35
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_3: "Suspicious use of curl with secrets"
 [32m	PASSED for resource: jobs(build).steps[6](Check kubernetes misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:32-36
+[35m	File: /.github/workflows/docker-image.yml:34-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-curl-with-secrets
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build).steps[1]
-[35m	File: /.github/workflows/docker-image.yml:16-19
+[35m	File: /.github/workflows/docker-image.yml:18-21
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build).steps[2](Install pip3)
-[35m	File: /.github/workflows/docker-image.yml:18-24
+[35m	File: /.github/workflows/docker-image.yml:20-26
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build).steps[3](Install checkov)
-[35m	File: /.github/workflows/docker-image.yml:23-27
+[35m	File: /.github/workflows/docker-image.yml:25-29
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build).steps[4](Check terraform, github-actions misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:26-30
+[35m	File: /.github/workflows/docker-image.yml:28-32
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build).steps[5](Install kubescape)
-[35m	File: /.github/workflows/docker-image.yml:29-33
+[35m	File: /.github/workflows/docker-image.yml:31-35
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_1: "Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables"
 [32m	PASSED for resource: jobs(build).steps[6](Check kubernetes misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:32-36
+[35m	File: /.github/workflows/docker-image.yml:34-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-actions_allow_unsecure_commands-isnt-true-on-environment-variables
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build).steps[1]
-[35m	File: /.github/workflows/docker-image.yml:16-19
+[35m	File: /.github/workflows/docker-image.yml:18-21
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build).steps[2](Install pip3)
-[35m	File: /.github/workflows/docker-image.yml:18-24
+[35m	File: /.github/workflows/docker-image.yml:20-26
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build).steps[3](Install checkov)
-[35m	File: /.github/workflows/docker-image.yml:23-27
+[35m	File: /.github/workflows/docker-image.yml:25-29
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build).steps[4](Check terraform, github-actions misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:26-30
+[35m	File: /.github/workflows/docker-image.yml:28-32
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build).steps[5](Install kubescape)
-[35m	File: /.github/workflows/docker-image.yml:29-33
+[35m	File: /.github/workflows/docker-image.yml:31-35
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_2: "Ensure run commands are not vulnerable to shell injection"
 [32m	PASSED for resource: jobs(build).steps[6](Check kubernetes misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:32-36
+[35m	File: /.github/workflows/docker-image.yml:34-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/ensure-run-commands-are-not-vulnerable-to-shell-injection
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build).steps[1]
-[35m	File: /.github/workflows/docker-image.yml:16-19
+[35m	File: /.github/workflows/docker-image.yml:18-21
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build).steps[2](Install pip3)
-[35m	File: /.github/workflows/docker-image.yml:18-24
+[35m	File: /.github/workflows/docker-image.yml:20-26
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build).steps[3](Install checkov)
-[35m	File: /.github/workflows/docker-image.yml:23-27
+[35m	File: /.github/workflows/docker-image.yml:25-29
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build).steps[4](Check terraform, github-actions misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:26-30
+[35m	File: /.github/workflows/docker-image.yml:28-32
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build).steps[5](Install kubescape)
-[35m	File: /.github/workflows/docker-image.yml:29-33
+[35m	File: /.github/workflows/docker-image.yml:31-35
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV_GHA_4: "Suspicious use of netcat with IP address"
 [32m	PASSED for resource: jobs(build).steps[6](Check kubernetes misconfigurations)
-[35m	File: /.github/workflows/docker-image.yml:32-36
+[35m	File: /.github/workflows/docker-image.yml:34-38
 	Guide: [1m[4m[34mhttps://docs.bridgecrew.io/docs/suspicious-use-of-netcat-with-ip-address
 [97mCheck: CKV2_GHA_1: "Ensure top-level permissions are not set to write-all"
 [31m	FAILED for resource: permissions
