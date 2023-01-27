@@ -24,4 +24,4 @@ RUN set -x \
 
 WORKDIR /root
 
-ENTRYPOINT ["gcloud"
+ENTRYPOINT ["gcloud"]
