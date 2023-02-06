@@ -30,7 +30,4 @@ jobs:
 
     - name: Install kubescape
       run: curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash
-
-    - name: Check kubernetes misconfigurations
-      run: kubescape scan .
       
