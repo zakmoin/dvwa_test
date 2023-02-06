@@ -3,7 +3,7 @@ data "google_compute_zones" "available_zones" {
   region  = var.region
 }
 
-resource "google_container_cluster" "workload_cluster" {
+resource "google_container_cluster" "workload_cluster2" {
   name               = "terragoat-${var.environment}-cluster"
   logging_service    = "none"
   location           = var.region
@@ -16,18 +16,7 @@ resource "google_container_cluster" "workload_cluster" {
   subnetwork               = google_compute_subnetwork.public-subnetwork.name
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block = "0.0.0.0/0"
+      cidr_block = "10.0.0.0/0"
     }
-  }
-  enable_intranode_visibility = true
-}
-
-
-resource "google_container_node_pool" "custom_node_pool" {
-  cluster  = google_container_cluster.workload_cluster.name
-  location = var.region
-
-  node_config {
-    image_type = "Ubuntu"
   }
 }

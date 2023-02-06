@@ -25,3 +25,5 @@ RUN set -x \
 WORKDIR /root
 
 ENTRYPOINT ["gcloud"
+
+#What is ENTRYPOINT
